@@ -5,12 +5,12 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Text
 %define	pnam	VimColor
-Summary:	Syntax color text in HTML or XML using Vim
-Summary(pl):	Kolorowanie sk³adni tekstu do HTML-a lub XML-a przy u¿yciu Vima
+Summary:	Text::VimColor - syntax color text in HTML or XML using Vim
+Summary(pl):	Text::VimColor - kolorowanie sk³adni tekstu w HTML-u lub XML-u przy u¿yciu Vima
 Name:		perl-Text-VimColor
 Version:	0.08
 Release:	1
-# same as Perl
+# same as perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
