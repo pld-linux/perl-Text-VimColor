@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Text
-%define	pnam	VimColor
+%define		pdir	Text
+%define		pnam	VimColor
 Summary:	Text::VimColor - syntax color text in HTML or XML using Vim
 Summary(pl):	Text::VimColor - kolorowanie sk³adni tekstu w HTML-u lub XML-u przy u¿yciu Vima
 Name:		perl-Text-VimColor
