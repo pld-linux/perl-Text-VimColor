@@ -1,11 +1,12 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Text
 %define	pnam	VimColor
 Summary:	Syntax color text in HTML or XML using Vim
+Summary(pl):	Kolorowanie sk³adni tekstu do HTML-a lub XML-a przy u¿yciu Vima
 Name:		perl-Text-VimColor
 Version:	0.07
 Release:	1
@@ -14,11 +15,11 @@ License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6d19512fb68787d06818b3e8093886e7
-BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Path-Class
 %endif
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,6 +40,25 @@ This module works by running the Vim text editor and getting it to
 apply its excellent syntax highlighting (aka 'font-locking') to an
 input file, and mark pieces of text according to whether it thinks
 they are comments, keywords, strings, etc.
+
+%description -l pl
+Ten modu³ próbuje oznaczyæ pliki tekstowe zgodnie z ich sk³adni±. Mo¿e
+byæ u¿ywany do tworzenia stron WWW z ³adnie wydrukowanymi, kolorowymi
+przyk³adami kodu ¼ród³owego. Modu³ mo¿e tworzyæ wynik w nastêpuj±cych
+formatach:
+- HTML - poprawny XHTML 1.0, z dok³adnym kolorowaniem i stylem
+  pozostawionym dla arkusza CSS
+- XML - fragmenty tekstu oznaczane elementami XML z prostym
+  s³ownictwem; mo¿na to skonwertowaæ do innych formatów, na przyk³ad
+  przy u¿yciu XSLT
+- tablica perlowa - prosta struktura danych w Perlu, dziêki czemu
+  mo¿na u¿yæ perlowego kodu do przekszta³cenia jej w co tylko
+  potrzeba.
+Ten modu³ dzia³a poprzez uruchomienie edytora tekstu Vim i zmuszenie
+go do zastosowania swojego ¶wietnego pod¶wietlania sk³adni (znanego
+tak¿e jako 'font-locking') dla pliku wej¶ciowego oraz oznaczenia
+fragmentów tekstu zale¿nie od tego, czy uwa¿a je za komentarze, s³owa
+kluczowe, ³añcuchy itp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
