@@ -8,13 +8,13 @@
 Summary:	Syntax color text in HTML or XML using Vim
 Summary(pl):	Kolorowanie sk³adni tekstu do HTML-a lub XML-a przy u¿yciu Vima
 Name:		perl-Text-VimColor
-Version:	0.07
+Version:	0.08
 Release:	1
 # same as Perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	6d19512fb68787d06818b3e8093886e7
+# Source0-md5:	4b5ebfc9e0d8be876d44d3c72b937759
 %if %{with tests}
 BuildRequires:	perl-Path-Class
 %endif
