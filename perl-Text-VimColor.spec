@@ -48,7 +48,7 @@ przyk³adami kodu ¼ród³owego. Modu³ mo¿e tworzyæ wynik w nastêpuj±cych
 formatach:
 - HTML - poprawny XHTML 1.0, z dok³adnym kolorowaniem i stylem
   pozostawionym dla arkusza CSS
-- XML - fragmenty tekstu oznaczane elementami XML z prostym
+- XML - fragmenty tekstu oznaczane elementami XML-a z prostym
   s³ownictwem; mo¿na to skonwertowaæ do innych formatów, na przyk³ad
   przy u¿yciu XSLT
 - tablica perlowa - prosta struktura danych w Perlu, dziêki czemu
