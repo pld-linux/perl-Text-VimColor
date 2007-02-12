@@ -6,7 +6,7 @@
 %define		pdir	Text
 %define		pnam	VimColor
 Summary:	Text::VimColor - syntax color text in HTML or XML using Vim
-Summary(pl):	Text::VimColor - kolorowanie sk≥adni tekstu w HTML-u lub XML-u przy uøyciu Vima
+Summary(pl.UTF-8):   Text::VimColor - kolorowanie sk≈Çadni tekstu w HTML-u lub XML-u przy u≈ºyciu Vima
 Name:		perl-Text-VimColor
 Version:	0.11
 Release:	2
@@ -42,24 +42,24 @@ apply its excellent syntax highlighting (aka 'font-locking') to an
 input file, and mark pieces of text according to whether it thinks
 they are comments, keywords, strings, etc.
 
-%description -l pl
-Ten modu≥ prÛbuje oznaczyÊ pliki tekstowe zgodnie z ich sk≥adni±. Moøe
-byÊ uøywany do tworzenia stron WWW z ≥adnie wydrukowanymi, kolorowymi
-przyk≥adami kodu ºrÛd≥owego. Modu≥ moøe tworzyÊ wynik w nastÍpuj±cych
+%description -l pl.UTF-8
+Ten modu≈Ç pr√≥buje oznaczyƒá pliki tekstowe zgodnie z ich sk≈ÇadniƒÖ. Mo≈ºe
+byƒá u≈ºywany do tworzenia stron WWW z ≈Çadnie wydrukowanymi, kolorowymi
+przyk≈Çadami kodu ≈∫r√≥d≈Çowego. Modu≈Ç mo≈ºe tworzyƒá wynik w nastƒôpujƒÖcych
 formatach:
-- HTML - poprawny XHTML 1.0, z dok≥adnym kolorowaniem i stylem
+- HTML - poprawny XHTML 1.0, z dok≈Çadnym kolorowaniem i stylem
   pozostawionym dla arkusza CSS
 - XML - fragmenty tekstu oznaczane elementami XML-a z prostym
-  s≥ownictwem; moøna to skonwertowaÊ do innych formatÛw, na przyk≥ad
-  przy uøyciu XSLT
-- tablica perlowa - prosta struktura danych w Perlu, dziÍki czemu
-  moøna uøyÊ perlowego kodu do przekszta≥cenia jej w co tylko
+  s≈Çownictwem; mo≈ºna to skonwertowaƒá do innych format√≥w, na przyk≈Çad
+  przy u≈ºyciu XSLT
+- tablica perlowa - prosta struktura danych w Perlu, dziƒôki czemu
+  mo≈ºna u≈ºyƒá perlowego kodu do przekszta≈Çcenia jej w co tylko
   potrzeba.
-Ten modu≥ dzia≥a poprzez uruchomienie edytora tekstu Vim i zmuszenie
-go do zastosowania swojego ∂wietnego pod∂wietlania sk≥adni (znanego
-takøe jako 'font-locking') dla pliku wej∂ciowego oraz oznaczenia
-fragmentÛw tekstu zaleønie od tego, czy uwaøa je za komentarze, s≥owa
-kluczowe, ≥aÒcuchy itp.
+Ten modu≈Ç dzia≈Ça poprzez uruchomienie edytora tekstu Vim i zmuszenie
+go do zastosowania swojego ≈õwietnego pod≈õwietlania sk≈Çadni (znanego
+tak≈ºe jako 'font-locking') dla pliku wej≈õciowego oraz oznaczenia
+fragment√≥w tekstu zale≈ºnie od tego, czy uwa≈ºa je za komentarze, s≈Çowa
+kluczowe, ≈Ça≈Ñcuchy itp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
