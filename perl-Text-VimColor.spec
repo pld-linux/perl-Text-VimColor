@@ -6,7 +6,7 @@
 %define		pdir	Text
 %define		pnam	VimColor
 Summary:	Text::VimColor - syntax color text in HTML or XML using Vim
-Summary(pl.UTF-8):   Text::VimColor - kolorowanie składni tekstu w HTML-u lub XML-u przy użyciu Vima
+Summary(pl.UTF-8):	Text::VimColor - kolorowanie składni tekstu w HTML-u lub XML-u przy użyciu Vima
 Name:		perl-Text-VimColor
 Version:	0.11
 Release:	2
