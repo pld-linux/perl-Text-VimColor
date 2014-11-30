@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Text
 %define		pnam	VimColor
+%include	/usr/lib/rpm/macros.perl
 Summary:	Text::VimColor - syntax color text in HTML or XML using Vim
 Summary(pl.UTF-8):	Text::VimColor - kolorowanie składni tekstu w HTML-u lub XML-u przy użyciu Vima
 Name:		perl-Text-VimColor
@@ -15,6 +15,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	268fb3f630b463fcec528d798dcf77c3
+URL:		http://search.cpan.org/dist/Text-VimColor/
 %if %{with tests}
 BuildRequires:	perl-Path-Class
 BuildRequires:	vim
@@ -28,19 +29,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module tries to markup text files according to their syntax. It
 can be used to produce web pages with pretty-printed colourful source
 code samples. It can produce output in the following formats:
-- HTML 
- Valid XHTML 1.0, with the exact colouring and style left to a CSS
- stylesheet
-- XML 
- Pieces of text are marked with XML elements in a simple vocabulary,
- which can be converted to other formats, for example, using XSLT
-- Perl array 
- A simple Perl data structure, so that Perl code can be used to turn
- it into whatever is needed
-This module works by running the Vim text editor and getting it to
-apply its excellent syntax highlighting (aka 'font-locking') to an
-input file, and mark pieces of text according to whether it thinks
-they are comments, keywords, strings, etc.
+- HTML Valid XHTML 1.0, with the exact colouring and style left to a
+  CSS stylesheet
+- XML Pieces of text are marked with XML elements in a simple
+  vocabulary, which can be converted to other formats, for example,
+  using XSLT
+- Perl array A simple Perl data structure, so that Perl code can be
+  used to turn it into whatever is needed This module works by running
+  the Vim text editor and getting it to apply its excellent syntax
+  highlighting (aka 'font-locking') to an input file, and mark pieces of
+  text according to whether it thinks they are comments, keywords,
+  strings, etc.
 
 %description -l pl.UTF-8
 Ten moduł próbuje oznaczyć pliki tekstowe zgodnie z ich składnią. Może
@@ -53,13 +52,12 @@ formatach:
   słownictwem; można to skonwertować do innych formatów, na przykład
   przy użyciu XSLT
 - tablica perlowa - prosta struktura danych w Perlu, dzięki czemu
-  można użyć perlowego kodu do przekształcenia jej w co tylko
-  potrzeba.
-Ten moduł działa poprzez uruchomienie edytora tekstu Vim i zmuszenie
-go do zastosowania swojego świetnego podświetlania składni (znanego
-także jako 'font-locking') dla pliku wejściowego oraz oznaczenia
-fragmentów tekstu zależnie od tego, czy uważa je za komentarze, słowa
-kluczowe, łańcuchy itp.
+  można użyć perlowego kodu do przekształcenia jej w co tylko potrzeba.
+  Ten moduł działa poprzez uruchomienie edytora tekstu Vim i zmuszenie
+  go do zastosowania swojego świetnego podświetlania składni (znanego
+  także jako 'font-locking') dla pliku wejściowego oraz oznaczenia
+  fragmentów tekstu zależnie od tego, czy uważa je za komentarze, słowa
+  kluczowe, łańcuchy itp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
