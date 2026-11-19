@@ -7,20 +7,25 @@
 Summary:	Text::VimColor - syntax color text in HTML or XML using Vim
 Summary(pl.UTF-8):	Text::VimColor - kolorowanie składni tekstu w HTML-u lub XML-u przy użyciu Vima
 Name:		perl-Text-VimColor
-Version:	0.11
-Release:	4
+Version:	0.29
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	268fb3f630b463fcec528d798dcf77c3
+# Source0-md5:	b1dca8351317a347ac08a8dcbf144d24
 URL:		http://search.cpan.org/dist/Text-VimColor/
-%if %{with tests}
-BuildRequires:	perl-Path-Class
-BuildRequires:	vim
-%endif
+BuildRequires:	perl-File-ShareDir-Install >= 0.06
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+# Makefile.PL (inc/VimCommand.pm) runs vim
+BuildRequires:	vim
+%if %{with tests}
+BuildRequires:	perl-File-ShareDir
+BuildRequires:	perl-Path-Class >= 0.04
+BuildRequires:	perl-Test-File-ShareDir
+%endif
+Requires:	vim
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,8 +84,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc Changes README
 %attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/Text/*
+%{perl_vendorlib}/auto/share/dist/Text-VimColor
 %{_mandir}/man3/*
 %{_mandir}/man1/*
